@@ -7,3 +7,4 @@ def mul(a,b):
 
 #Variables
 courses = ["Java", "C++", "Python"]
+ 
