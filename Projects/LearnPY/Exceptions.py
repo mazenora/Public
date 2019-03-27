@@ -44,10 +44,11 @@ while True:
 while True:
     try:
         username = input("Your Name: ")
-        if len(username) < 5 or username.count(" ")>0:
-            raise ValueError
-    except ValueError:
-        print("Please try Again")
+        if len(username) < 5 or username.count(" ") > 0:
+            raise ValueError("Invalid User Name", "Length less than 5")
+        print("Hello: ", username)
+    except ValueError as e:
+        print("Please try Again: ", e.args[1])
     else:
         print("Alles OK")
         break
